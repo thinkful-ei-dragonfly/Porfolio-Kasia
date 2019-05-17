@@ -1,0 +1,60 @@
+* {
+    color: navy;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+.main {
+    flex: 1 ;
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  
+  .main > * {
+    flex: 1 100%;
+    padding: 20px;
+  }
+  .header {
+    background: tomato;
+    height: 100px;
+  }
+  
+  .footer {
+    background: lightgreen;
+  }
+  
+  #center {
+    text-align: left;
+    background: rgb(165, 186, 201);
+  }
+  
+  .aside-1 {
+    
+    background: white;
+  }
+  
+  .aside-2 {
+    background: white;
+  }
+  
+  /* Medium screens */
+  @media all and (min-width: 600px) {
+    /* We tell both sidebars to share a row */
+    .aside { flex: 1 0 0px; }
+  }
+  
+  /* Large screens */
+  @media all and (min-width: 800px) {
+    #center { flex: 7 0px; } 
+    .aside-1 { order: 1; }
+    #center   { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+  }
